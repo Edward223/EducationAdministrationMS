@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="317.0" prefWidth="591.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.EAMS.controller.TeacherManageModalController">
+   <children>
+      <Label layoutX="77.0" layoutY="84.0" text="性 别  :">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="77.0" layoutY="123.0" text="学 院  :">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="77.0" layoutY="43.0" text="姓 名  :">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="77.0" layoutY="165.0" text="邮 箱  :">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="65.0" layoutY="203.0" text="联系电话 :">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="name" layoutX="173.0" layoutY="42.0" />
+      <RadioButton fx:id="sex_man" layoutX="203.0" layoutY="87.0" mnemonicParsing="false" selected="true" text="男">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="sex" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="sex_woman" layoutX="289.0" layoutY="87.0" mnemonicParsing="false" text="女" toggleGroup="$sex">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </RadioButton>
+      <ComboBox fx:id="institute" layoutX="174.0" layoutY="122.0" prefHeight="30.0" prefWidth="202.0" />
+      <TextField fx:id="email" layoutX="173.0" layoutY="163.0" />
+      <TextField fx:id="phone" layoutX="174.0" layoutY="202.0" />
+      <Label fx:id="format_name" disable="true" layoutX="397.0" layoutY="46.0" textFill="RED">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="format_email" disable="true" layoutX="397.0" layoutY="167.0" textFill="RED">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="format_phone" disable="true" layoutX="397.0" layoutY="206.0" textFill="RED">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="submitBtn" defaultButton="true" layoutX="136.0" layoutY="255.0" mnemonicParsing="false" onAction="#submit" prefHeight="36.0" prefWidth="75.0" text="确认">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="closeBtn" layoutX="359.0" layoutY="255.0" mnemonicParsing="false" onAction="#close" prefHeight="36.0" prefWidth="75.0" text="返回">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

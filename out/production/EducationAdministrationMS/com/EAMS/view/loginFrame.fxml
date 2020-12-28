@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="340.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.EAMS.controller.LoginController">
+   <children>
+       <TextField fx:id="account" layoutX="220.0" layoutY="129.0" />
+       <PasswordField fx:id="password" layoutX="220.0" layoutY="191.0" />
+       <Label fx:id="accountLb" layoutX="136.0" layoutY="131.0" prefHeight="27.0" prefWidth="82.0" text="账号:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+       <Label fx:id="passwordLb" layoutX="136.0" layoutY="193.0" prefHeight="27.0" prefWidth="82.0" text="密码:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+       <Button fx:id="loginBtn" defaultButton="true" graphicTextGap="10.0" layoutX="140.0" layoutY="265.0" mnemonicParsing="false" onAction="#login" prefHeight="30.0" prefWidth="100.0" text="登录">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+       <Button fx:id="registerBtn" graphicTextGap="10.0" layoutX="350.0" layoutY="265.0" mnemonicParsing="false" onAction="#register" prefHeight="30.0" prefWidth="100.0" text="注册">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+       <Label fx:id="systemLb" alignment="CENTER" layoutX="116.0" layoutY="47.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="49.0" prefWidth="369.0" text="教务辅助管理系统" textAlignment="CENTER">
+           <font>
+               <Font name="Microsoft YaHei Bold" size="36.0" />
+           </font>
+       </Label>
+      <Label fx:id="format_account" layoutX="438.0" layoutY="133.0" text=" " textFill="RED">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="format_password" layoutX="438.0" layoutY="195.0" text=" " textFill="RED">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+
+</AnchorPane>

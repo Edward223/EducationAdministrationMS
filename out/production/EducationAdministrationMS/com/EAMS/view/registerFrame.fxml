@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="478.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.EAMS.controller.RegisterController">
+   <children>
+      <Label layoutX="95.0" layoutY="52.0" text="用户名* :">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="102.0" layoutY="91.0" text="密 码* :">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="85.0" layoutY="131.0" text="确认密码* :">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="102.0" layoutY="241.0" text="性 别* :">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="102.0" layoutY="280.0" text="学 院* :">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="102.0" layoutY="200.0" text="姓 名* :">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="104.0" layoutY="321.0" text="邮 箱 :">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="90.0" layoutY="360.0" text="联系电话 :">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Separator disable="true" layoutY="181.0" prefHeight="0.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="181.0" />
+      <TextField fx:id="account" layoutX="199.0" layoutY="51.0" />
+      <PasswordField fx:id="password" layoutX="199.0" layoutY="90.0" />
+      <PasswordField fx:id="confPassword" layoutX="199.0" layoutY="130.0" />
+      <TextField fx:id="name" layoutX="198.0" layoutY="199.0" />
+      <RadioButton fx:id="sex_man" layoutX="228.0" layoutY="244.0" mnemonicParsing="false" selected="true" text="男">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="sex" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="sex_woman" layoutX="314.0" layoutY="244.0" mnemonicParsing="false" text="女" toggleGroup="$sex">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </RadioButton>
+      <ComboBox fx:id="institute" layoutX="199.0" layoutY="279.0" prefHeight="30.0" prefWidth="202.0" />
+      <TextField fx:id="email" layoutX="198.0" layoutY="320.0" />
+      <TextField fx:id="phone" layoutX="199.0" layoutY="359.0" />
+      <Label fx:id="format_account" disable="true" layoutX="422.0" layoutY="55.0" textFill="RED">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="format_password" disable="true" layoutX="422.0" layoutY="94.0" textFill="RED">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="format_confPassword" disable="true" layoutX="422.0" layoutY="134.0" textFill="RED">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="format_name" disable="true" layoutX="422.0" layoutY="203.0" textFill="RED">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="format_email" disable="true" layoutX="422.0" layoutY="324.0" textFill="RED">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="format_phone" disable="true" layoutX="422.0" layoutY="363.0" textFill="RED">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="registerBtn" defaultButton="true" layoutX="161.0" layoutY="412.0" mnemonicParsing="false" onAction="#register" prefHeight="30.0" prefWidth="100.0" text="确认">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="resetBtn" layoutX="384.0" layoutY="412.0" mnemonicParsing="false" onAction="#reset" prefHeight="30.0" prefWidth="100.0" text="重置">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefWidth="1215.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.EAMS.controller.CourseManageController">
+    <children>
+        <VBox prefHeight="850.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <HBox prefHeight="50.0" prefWidth="1200.0">
+                    <children>
+                        <Label prefHeight="50.0" prefWidth="194.0" text=" 课 程 管 理 ">
+                            <font>
+                                <Font name="System Bold" size="34.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="25.0" />
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                </HBox>
+                <Separator prefWidth="200.0" />
+                <HBox alignment="CENTER_LEFT" prefHeight="75.0" prefWidth="1200.0">
+                    <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="74.0" prefWidth="782.0">
+                            <children>
+                                <TextField fx:id="select_courseName" prefHeight="40.0" promptText="课程名">
+                                    <HBox.margin>
+                                        <Insets left="50.0" />
+                                    </HBox.margin>
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </TextField>
+                                <ComboBox fx:id="select_courserInstitute" prefHeight="40.0" prefWidth="150.0">
+                                    <HBox.margin>
+                                        <Insets left="20.0" />
+                                    </HBox.margin>
+                                </ComboBox>
+                                <Button mnemonicParsing="false" onAction="#selectBtn" prefHeight="40.0" prefWidth="90.0" style="-fx-background-color: #0069D9;" text="查询" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="22.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets left="20.0" />
+                                    </HBox.margin>
+                                </Button>
+                            </children>
+                        </HBox>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <HBox alignment="CENTER_RIGHT" prefHeight="74.0" prefWidth="421.0">
+                            <children>
+                                <Button mnemonicParsing="false" onAction="#saveBtn" prefHeight="40.0" prefWidth="90.0" style="-fx-background-color: #16a951;" text="添加" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="22.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets right="20.0" />
+                                    </HBox.margin>
+                                </Button>
+                                <ImageView fx:id="refreshImg" fitHeight="40.0" fitWidth="40.0" onMouseClicked="#refreshBtn" pickOnBounds="true" preserveRatio="true">
+                                    <HBox.margin>
+                                        <Insets right="20.0" />
+                                    </HBox.margin>
+                                </ImageView>
+                            </children>
+                        </HBox>
+                    </children>
+                </HBox>
+                <VBox alignment="CENTER" prefHeight="725.0" prefWidth="1200.0">
+                    <children>
+                        <TableView fx:id="tableView" prefHeight="725.0" prefWidth="1200.0">
+                            <columns>
+                                <TableColumn fx:id="idTabCol" minWidth="100.0" prefWidth="150.0" text="课程id" visible="false" />
+                                <TableColumn fx:id="nameTabCol" minWidth="300.0" prefWidth="300.0" style="-fx-alignment: center;" text="课程名" />
+                        <TableColumn fx:id="periodTabCol" minWidth="200.0" prefWidth="200.0" style="-fx-alignment: center;" text="课时数" />
+                                <TableColumn fx:id="instituteTabCol" minWidth="200.0" prefWidth="200.0" style="-fx-alignment: center;" text="学院" />
+                                <TableColumn fx:id="teacherNumTabCol" minWidth="100.0" prefWidth="100.0" style="-fx-alignment: center;" text="相关教师数量" />
+                                <TableColumn fx:id="majorNumTabCol" minWidth="100.0" prefWidth="100.0" style="-fx-alignment: center;" text="相关专业数量" />
+                                <TableColumn editable="false" minWidth="200.0" prefWidth="200.0" resizable="false" sortable="false" text="操作">
+                                    <columns>
+                                        <TableColumn fx:id="courseTabCol" editable="false" maxWidth="-1.0" minWidth="100.0" prefWidth="-1.0" sortable="false" style="-fx-alignment: center;" text="排课" />
+                                        <TableColumn fx:id="deleteTabCol" editable="false" maxWidth="-1.0" minWidth="100.0" prefWidth="-1.0" sortable="false" style="-fx-alignment: center;" text="删除" />
+                                    </columns>
+                                </TableColumn>
+                            </columns>
+                            <columnResizePolicy>
+                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                            </columnResizePolicy>
+                     <VBox.margin>
+                        <Insets bottom="25.0" left="25.0" right="25.0" />
+                     </VBox.margin>
+                        </TableView>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

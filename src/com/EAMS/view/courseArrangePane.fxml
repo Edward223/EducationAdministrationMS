@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="850.0" prefWidth="1215.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.EAMS.controller.CourseArrangeController">
+    <children>
+        <VBox prefHeight="850.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <HBox prefHeight="50.0" prefWidth="1200.0">
+                    <children>
+                        <Label prefHeight="50.0" prefWidth="194.0" text="排 课">
+                            <font>
+                                <Font name="System Bold" size="34.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="25.0" />
+                            </HBox.margin>
+                        </Label>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="44.0" prefWidth="996.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#initTimetable" prefHeight="28.0" prefWidth="69.0" style="-fx-background-color: #CC0000;" text="初始化" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="25.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                    </children>
+                </HBox>
+                <Separator prefWidth="200.0" />
+                <HBox alignment="CENTER_LEFT" prefHeight="141.0" prefWidth="1215.0">
+                    <children>
+                  <VBox prefHeight="132.0" prefWidth="1065.0">
+                     <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="74.0" prefWidth="1012.0">
+                                  <children>
+                                      <TextField fx:id="select_teacher" prefHeight="40.0" promptText="教师姓名">
+                                          <HBox.margin>
+                                              <Insets left="25.0" />
+                                          </HBox.margin>
+                                          <font>
+                                              <Font size="18.0" />
+                                          </font>
+                                      </TextField>
+                              <TextField fx:id="select_course" prefHeight="40.0" promptText="课程名">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </TextField>
+                                      <ComboBox fx:id="select_classroom" prefHeight="40.0" prefWidth="150.0">
+                                          <HBox.margin>
+                                              <Insets left="20.0" />
+                                          </HBox.margin>
+                                      </ComboBox>
+                              <ComboBox fx:id="select_week" prefHeight="40.0" prefWidth="125.0">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </ComboBox>
+                                  </children>
+                              </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="74.0" prefWidth="1012.0">
+                           <children>
+                              <ComboBox fx:id="select_institute" prefHeight="40.0" prefWidth="175.0">
+                                 <HBox.margin>
+                                    <Insets left="25.0" />
+                                 </HBox.margin>
+                              </ComboBox>
+                              <ComboBox fx:id="select_major" prefHeight="40.0" prefWidth="175.0">
+                                 <HBox.margin>
+                                    <Insets left="25.0" />
+                                 </HBox.margin>
+                              </ComboBox>
+                              <ComboBox fx:id="select_grade" prefHeight="40.0" prefWidth="125.0">
+                                 <HBox.margin>
+                                    <Insets left="25.0" />
+                                 </HBox.margin>
+                              </ComboBox>
+                                      <ComboBox fx:id="select_class" prefHeight="40.0" prefWidth="125.0">
+                                          <HBox.margin>
+                                              <Insets left="20.0" />
+                                          </HBox.margin>
+                                      </ComboBox>
+                              <Button mnemonicParsing="false" onAction="#select" prefHeight="40.0" prefWidth="90.0" style="-fx-background-color: #0069D9;" text="查询" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="22.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="60.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                        <Separator orientation="VERTICAL" prefHeight="110.0" prefWidth="0.0" />
+                        <HBox alignment="CENTER_RIGHT" prefHeight="110.0" prefWidth="523.0">
+                            <children>
+                        <Button mnemonicParsing="false" onAction="#autoArrangeCourse" prefHeight="45.0" prefWidth="138.0" style="-fx-background-color: #09859A;" text="一键排课" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </HBox.margin>
+                        </Button>
+                                <Button mnemonicParsing="false" onAction="#saveTimetable" prefHeight="40.0" prefWidth="90.0" style="-fx-background-color: #16a951;" text="排课" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="22.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets right="20.0" />
+                                    </HBox.margin>
+                                </Button>
+                                <ImageView fx:id="refreshImg" fitHeight="40.0" fitWidth="40.0" onMouseClicked="#refresh" pickOnBounds="true" preserveRatio="true">
+                                    <HBox.margin>
+                                        <Insets right="20.0" />
+                                    </HBox.margin>
+                                </ImageView>
+                            </children>
+                        </HBox>
+                    </children>
+                </HBox>
+                <VBox alignment="CENTER" prefHeight="725.0" prefWidth="1200.0">
+                    <children>
+                        <TableView fx:id="tableView" prefHeight="725.0" prefWidth="1200.0" VBox.vgrow="ALWAYS">
+                            <columns>
+                                <TableColumn fx:id="idTabCol" minWidth="100.0" prefWidth="150.0" text="课表id" visible="false" />
+                                <TableColumn fx:id="courseTabCol" maxWidth="200.0" minWidth="100.0" prefWidth="200.0" style="-fx-alignment: center;" text="课程名" />
+                                <TableColumn fx:id="majorTabCol" maxWidth="175.0" minWidth="100.0" prefWidth="200.0" style="-fx-alignment: center;" text="专业" />
+                                <TableColumn fx:id="classTabCol" maxWidth="85.0" minWidth="85.0" prefWidth="200.0" style="-fx-alignment: center;" text="班级" />
+                                <TableColumn fx:id="teacherTabCol" maxWidth="85.0" minWidth="85.0" prefWidth="200.0" style="-fx-alignment: center;" text="教师" />
+                                <TableColumn fx:id="classroomTabCol" maxWidth="85.0" minWidth="85.0" prefWidth="200.0" style="-fx-alignment: center;" text="教室" />
+                                <TableColumn fx:id="weekTabCol" maxWidth="300.0" minWidth="300.0" prefWidth="300.0" style="-fx-alignment: center;" text="周次" />
+                                <TableColumn fx:id="timeslotTabCol" maxWidth="130.0" minWidth="130.0" prefWidth="130.0" style="-fx-alignment: center;" text="时间" />
+                                <TableColumn fx:id="deleteTabCol" editable="false" maxWidth="-1.0" minWidth="85.0" prefWidth="-1.0" resizable="false" sortable="false" style="-fx-alignment: center;" text="取消" />
+                            </columns>
+                            <VBox.margin>
+                                <Insets bottom="25.0" left="25.0" right="25.0" />
+                            </VBox.margin>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                        </TableView>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

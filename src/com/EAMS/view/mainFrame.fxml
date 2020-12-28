@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.EAMS.controller.MainController">
+   <children>
+      <HBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox prefWidth="200.0" style="-fx-background-color: #99CCFF;">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fx:id="icon" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <HBox fx:id="home" onMouseClicked="#doHome" prefHeight="60.0" prefWidth="200.0" style="-fx-alignment: center;">
+                     <children>
+                        <Label fx:id="homeLb" graphicTextGap="15.0" prefHeight="30.0" text=" 主    页  ">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <HBox fx:id="courseArranging" onMouseClicked="#doCourseArranging" prefHeight="60.0" prefWidth="200.0" style="-fx-alignment: center;">
+                     <children>
+                        <Label fx:id="courseArrangingLb" graphicTextGap="15.0" prefHeight="30.0" text=" 排    课  ">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <HBox fx:id="teacherManage" onMouseClicked="#doTeacherManage" prefHeight="60.0" prefWidth="200.0" style="-fx-alignment: center;">
+                     <children>
+                        <Label fx:id="teacherManageLb" graphicTextGap="15.0" prefHeight="30.0" text="教师管理">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <HBox fx:id="courseManage" onMouseClicked="#doCourseManage" prefHeight="60.0" prefWidth="200.0" style="-fx-alignment: center;">
+                     <children>
+                        <Label fx:id="courseManageLb" graphicTextGap="15.0" prefHeight="30.0" text="课程管理">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <HBox fx:id="exit" onMouseClicked="#doExit" prefHeight="60.0" prefWidth="200.0" style="-fx-alignment: center;">
+                     <children>
+                        <Label fx:id="exitLb" alignment="CENTER" graphicTextGap="15.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="30.0" text="退出系统">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+               </children>
+            </VBox>
+            <VBox prefHeight="850.0" prefWidth="1200.0">
+               <children>
+                  <AnchorPane fx:id="bodyPane" prefHeight="850.0" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

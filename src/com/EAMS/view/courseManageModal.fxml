@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="277.0" prefWidth="591.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.EAMS.controller.CourseManageModalController">
+   <children>
+      <Label alignment="CENTER_RIGHT" layoutX="38.0" layoutY="104.0" prefWidth="70.0" text="学 院  :" textAlignment="RIGHT">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="38.0" layoutY="43.0" text="课程名 :">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="38.0" layoutY="165.0" prefWidth="70.0" text="计 划  :" textAlignment="CENTER">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="name" layoutX="134.0" layoutY="42.0" prefHeight="30.0" prefWidth="242.0" />
+      <ComboBox fx:id="institute" layoutX="135.0" layoutY="103.0" prefHeight="30.0" prefWidth="242.0" />
+      <TextField fx:id="week" layoutX="301.0" layoutY="164.0" prefHeight="30.0" prefWidth="47.0" />
+      <Label fx:id="format_name" disable="true" layoutX="394.0" layoutY="46.0" textFill="RED">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="submitBtn" defaultButton="true" layoutX="147.0" layoutY="230.0" mnemonicParsing="false" onAction="#submit" prefHeight="36.0" prefWidth="75.0" text="确认">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="closeBtn" layoutX="370.0" layoutY="230.0" mnemonicParsing="false" onAction="#close" prefHeight="36.0" prefWidth="75.0" text="返回">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Label alignment="CENTER_RIGHT" layoutX="356.0" layoutY="165.0" text="周" textAlignment="CENTER">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="187.0" layoutY="165.0" text="每周课时数，" textAlignment="CENTER">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="lesson" layoutX="133.0" layoutY="165.0" prefHeight="30.0" prefWidth="47.0" />
+      <Label fx:id="format_period" disable="true" layoutX="394.0" layoutY="168.0" textFill="RED">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

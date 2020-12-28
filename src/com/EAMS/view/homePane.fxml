@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="850.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.EAMS.controller.homeController">
+   <children>
+      <HBox layoutX="6.0" prefHeight="850.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox prefHeight="850.0" prefWidth="792.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="109.0" prefWidth="670.0" text="教 务 辅 助 管 理 系 统">
+                           <font>
+                              <Font name="System Bold" size="48.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" style="-fx-background-color: #FFFFFF;" />
+                  <HBox alignment="CENTER_LEFT" prefHeight="186.0" prefWidth="761.0">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin></HBox>
+                  <Separator prefWidth="200.0" style="-fx-background-color: #FFFFFF;" />
+                  <HBox prefHeight="503.0" prefWidth="761.0">
+                     <children>
+                        <BarChart fx:id="barChart" barGap="0.0" categoryGap="100.0" legendVisible="false" prefHeight="468.0" prefWidth="761.0" title="教师工作量统计">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis label="课时数" side="LEFT" />
+                          </yAxis>
+                        </BarChart>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="761.0">
+                     <children>
+                        <ComboBox fx:id="weekComBox" prefWidth="150.0">
+                           <HBox.margin>
+                              <Insets left="25.0" right="25.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <ComboBox fx:id="instituteComBox" prefWidth="150.0">
+                           <HBox.margin>
+                              <Insets left="25.0" right="25.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <ComboBox fx:id="teacherComBox" prefWidth="150.0">
+                           <HBox.margin>
+                              <Insets left="25.0" right="25.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Separator orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: #FFFFFF;" />
+            <VBox prefHeight="850.0" prefWidth="464.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="419.0" prefWidth="433.0">
+                     <children>
+                        <ImageView fx:id="userIcon" fitHeight="172.0" fitWidth="244.0" pickOnBounds="true" preserveRatio="true" />
+                        <HBox alignment="CENTER_LEFT" prefHeight="38.0" prefWidth="433.0">
+                           <children>
+                              <Label text="姓名：">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="100.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="name" text="姓名">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="38.0" prefWidth="433.0">
+                           <children>
+                              <Label text="性别：">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="100.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="sex" text="性别">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="38.0" prefWidth="433.0">
+                           <children>
+                              <Label text="学院：">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="100.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="institute" text="学院">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="38.0" prefWidth="433.0">
+                           <children>
+                              <Label text="邮箱：">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="100.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="email" text="邮箱">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="38.0" prefWidth="433.0">
+                           <children>
+                              <Label text="手机：">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="100.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="phone" text="手机">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Separator prefWidth="200.0" style="-fx-background-color: #FFFFFF;" />
+                  <Separator prefWidth="200.0" style="-fx-background-color: #FFFFFF;" />
+                  <HBox alignment="CENTER" prefHeight="108.0" prefWidth="433.0">
+                     <children>
+                        <ImageView fx:id="teacherIcon" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label alignment="CENTER" prefHeight="54.0" prefWidth="107.0" text="在职教师">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="teacherNum" alignment="CENTER" prefHeight="54.0" prefWidth="107.0" text="201人">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <Separator prefWidth="200.0" style="-fx-background-color: #FFFFFF;" />
+                  <HBox alignment="CENTER" prefHeight="103.0" prefWidth="433.0">
+                     <children>
+                        <ImageView fx:id="classIcon" fitHeight="90.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label alignment="CENTER" prefHeight="54.0" prefWidth="107.0" text="班级数量">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="classNum" alignment="CENTER" prefHeight="54.0" prefWidth="107.0" text="89个">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" style="-fx-background-color: #FFFFFF;" />
+                  <Separator prefWidth="200.0" style="-fx-background-color: #FFFFFF;" />
+                  <HBox alignment="CENTER" prefHeight="98.0" prefWidth="433.0">
+                     <children>
+                        <ImageView fx:id="courseIcon" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label alignment="CENTER" prefHeight="54.0" prefWidth="107.0" text="课程数量">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="courseNum" alignment="CENTER" prefHeight="54.0" prefWidth="107.0" text="411门">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" style="-fx-background-color: #FFFFFF;" />
+                  <Separator prefWidth="200.0" style="-fx-background-color: #FFFFFF;" />
+                  <HBox alignment="CENTER" prefHeight="103.0" prefWidth="433.0">
+                     <children>
+                        <ImageView fx:id="classroomIcon" fitHeight="85.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label alignment="CENTER" prefHeight="54.0" prefWidth="118.0" text="   可用教室">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="classroomNum" alignment="CENTER" prefHeight="54.0" prefWidth="107.0" text="61间">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
