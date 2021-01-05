@@ -302,5 +302,6 @@ public class CourseArrangeController {
     void autoArrangeCourse(ActionEvent event) {
         TimetableService timetableService = new TimetableServiceImpl();
         timetableService.autoArrangeCourse();
+        refresh(null);
     }
 }

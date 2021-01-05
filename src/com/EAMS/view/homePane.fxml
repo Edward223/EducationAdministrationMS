@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.*?>
-<?import javafx.scene.text.*?>
-<?import javafx.scene.image.*?>
 <?import javafx.scene.chart.*?>
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="850.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.EAMS.controller.homeController">
+<AnchorPane prefHeight="850.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.EAMS.controller.homeController">
    <children>
       <HBox layoutX="6.0" prefHeight="850.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -26,10 +23,59 @@
                      </children>
                   </HBox>
                   <Separator prefWidth="200.0" style="-fx-background-color: #FFFFFF;" />
-                  <HBox alignment="CENTER_LEFT" prefHeight="186.0" prefWidth="761.0">
+                  <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="762.0">
                      <VBox.margin>
                         <Insets />
                      </VBox.margin></HBox>
+                  <HBox prefHeight="54.0" prefWidth="762.0" />
+                  <HBox alignment="CENTER" prefHeight="49.0" prefWidth="762.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="206.0">
+                           <children>
+                              <Label text="①选择周次：">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="575.0">
+                           <children>
+                              <ComboBox fx:id="weekComBox" prefWidth="150.0">
+                                 <HBox.margin>
+                                    <Insets left="25.0" right="25.0" />
+                                 </HBox.margin>
+                              </ComboBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="761.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label text="②选择教师：">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="564.0">
+                           <children>
+                              <ComboBox fx:id="instituteComBox" prefWidth="150.0">
+                                 <HBox.margin>
+                                    <Insets left="25.0" right="25.0" />
+                                 </HBox.margin>
+                              </ComboBox>
+                              <ComboBox fx:id="teacherComBox" prefWidth="150.0">
+                                 <HBox.margin>
+                                    <Insets left="25.0" right="25.0" />
+                                 </HBox.margin>
+                              </ComboBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
                   <Separator prefWidth="200.0" style="-fx-background-color: #FFFFFF;" />
                   <HBox prefHeight="503.0" prefWidth="761.0">
                      <children>
@@ -41,25 +87,6 @@
                             <NumberAxis label="课时数" side="LEFT" />
                           </yAxis>
                         </BarChart>
-                     </children>
-                  </HBox>
-                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="761.0">
-                     <children>
-                        <ComboBox fx:id="weekComBox" prefWidth="150.0">
-                           <HBox.margin>
-                              <Insets left="25.0" right="25.0" />
-                           </HBox.margin>
-                        </ComboBox>
-                        <ComboBox fx:id="instituteComBox" prefWidth="150.0">
-                           <HBox.margin>
-                              <Insets left="25.0" right="25.0" />
-                           </HBox.margin>
-                        </ComboBox>
-                        <ComboBox fx:id="teacherComBox" prefWidth="150.0">
-                           <HBox.margin>
-                              <Insets left="25.0" right="25.0" />
-                           </HBox.margin>
-                        </ComboBox>
                      </children>
                   </HBox>
                </children>

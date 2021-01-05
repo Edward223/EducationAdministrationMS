@@ -257,15 +257,15 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-//        initLoginFrame();
-
-        User u = new User();
-        u.setName("test");
-        u.setPhone("123456");
-        u.setEmail("test@123.com");
-        u.setInstitute("信工学院");
-        u.setSex("男");
-        initMainFrame(u);
+        initLoginFrame();
+//
+//        User u = new User();
+//        u.setName("test");
+//        u.setPhone("123456");
+//        u.setEmail("test@123.com");
+//        u.setInstitute("信工学院");
+//        u.setSex("男");
+//        initMainFrame(u);
     }
 
 }
