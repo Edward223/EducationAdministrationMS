@@ -28,14 +28,15 @@
 -------
 
 <b>项目部分截图：</b>
-![登录](resources/img/readme/login.png "登录")
 
-![注册](resources/img/readme/register.png "注册")
+![登录](https://cdn.jsdelivr.net/gh/Iurac/picgo@main/20210303154238.png "登录")
 
-![首页](resources/img/readme/home.png "首页")
+![注册](https://cdn.jsdelivr.net/gh/Iurac/picgo@main/20210303154242.png "注册")
 
-![排课](resources/img/readme/courseArrange.png "排课")
+![首页](https://cdn.jsdelivr.net/gh/Iurac/picgo@main/20210303154241.png "首页")
 
-![教师管理](resources/img/readme/teacherManage.png "教师管理")
+![排课](https://cdn.jsdelivr.net/gh/Iurac/picgo@main/20210303154237.png "排课")
 
-![课程管理](resources/img/readme/courseManage.png "课程管理")
+![教师管理](https://cdn.jsdelivr.net/gh/Iurac/picgo@main/20210303154240.png "教师管理")
+
+![课程管理](https://cdn.jsdelivr.net/gh/Iurac/picgo@main/20210303154239.png "课程管理")
